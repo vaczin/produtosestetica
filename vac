@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VAC Recomenda</title>
+  <style>
+    :root {
+      --primary-color: #6a11cb;
+      --secondary-color: #2575fc;
+      --button-bg: #ffffff;
+      --button-hover: #f0f0f0;
+      --text-color: #333;
+      --background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--background);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      padding: 30px;
+      width: 100%;
+      max-width: 600px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 25px;
+    }
+
+    .search-box {
+      margin-bottom: 30px;
+    }
+
+    .search-box input {
+      width: 90%;
+      padding: 12px 15px;
+      border-radius: 10px;
+      border: none;
+      font-size: 16px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      outline: none;
+      transition: box-shadow 0.2s ease;
+    }
+
+    .search-box input:focus {
+      box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.4);
+    }
+
+    .link-button {
+      display: block;
+      width: 90%;
+      margin: 12px auto;
+      padding: 14px 20px;
+      background-color: var(--button-bg);
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      border-radius: 10px;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .link-button:hover {
+      background-color: var(--button-hover);
+      transform: scale(1.02);
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #ddd;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🌟 VAC Recomenda</h1>
+
+    <!-- Barra de Pesquisa -->
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Buscar produto..." onkeyup="filterLinks()" />
+    </div>
+
+    <!-- Links de afiliado -->
+    <a href="https://mercadolivre.com/sec/2GuUyQM" class="link-button">extratora ipc ea135</a>
+    <a href="https://mercadolivre.com/sec/1RGdnAy" class="link-button">canelinha finisher</a>
+    <a href="https://mercadolivre.com/sec/1NXwcjT" class="link-button">selante fusso coat claro</a>
+    <a href="https://mercadolivre.com/sec/2wzgtNr" class="link-button">selante fusso coat black</a>
+    <a href="https://mercadolivre.com/sec/12yHGLd" class="link-button">kit vonnix</a>
+    <a href="https://mercadolivre.com/sec/1WbWVaC" class="link-button">sintra 5L</a>
+    <a href="https://mercadolivre.com/sec/2MaAznh" class="link-button">kit alumax, removex</a>
+
+    <footer>
+      © 2025 - VAC Recomenda • Links de Confiança
+    </footer>
+  </div>
+
+  <script>
+    function filterLinks() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const links = document.getElementsByClassName('link-button');
+
+      for (let i = 0; i < links.length; i++) {
+        const text = links[i].textContent.toLowerCase();
+        links[i].style.display = text.includes(input) ? 'block' : 'none';
+      }
+    }
+  </script>
+</body>
+</html>
